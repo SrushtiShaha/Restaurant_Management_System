@@ -1,0 +1,103 @@
+.volunteer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .volunteer-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .progress-bar-container {
+    margin-top: 16px;
+    position: relative;
+    width: 100%;
+    height: 24px;
+    background-color: #e5e5e5;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #ff9800;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .points-text {
+    margin-top: 8px;
+    font-size: 16px;
+  }
+  
+  .rewards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  .reward-card {
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f7f7f7;
+  }
+  
+  .reward-card.locked {
+    background-color: #ddd;
+  }
+  
+  .reward-icon {
+    font-size: 32px;
+  }
+  
+  .reward-name {
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  
+  .reward-points {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .redeem-button {
+    margin-top: 8px;
+    padding: 6px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .redeem-button.active {
+    background-color: #ff9800;
+  }
+  
+  .redeem-button.disabled {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+  
+  .impact-section {
+    margin-top: 20px;
+    padding: 16px;
+    background-color: #e5e5e5;
+    border-radius: 8px;
+  }
+  
+  .impact-title {
+    font-weight: bold;
+  }
+  
+  .impact-text {
+    font-size: 16px;
+  }
+  

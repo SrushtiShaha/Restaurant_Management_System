@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+  font-family: "Istok Web", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0px;
+  margin: 0; /* Ensure no margin on body */
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: whitesmoke;
+  color: black;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  
+  /* Make navbar full-width */
+  width: 100%; /* Stretch to full width */
+  max-width: none; /* Remove any max-width constraints */
+  margin: 0; /* Remove any margins */
+  padding: 12px 20px; /* Keep padding for inner spacing */
+  box-sizing: border-box; /* Ensure padding doesn’t affect width */
+
+  /* Make navbar sticky */
+  position: fixed; /* Fix the navbar to the top */
+  top: 0; /* Align to the top of the viewport */
+  left: 0; /* Align to the left edge */
+}
+
+/* Add padding to the body to prevent content from being hidden under the navbar */
+body {
+  padding-top: 70px; /* Adjust based on the height of your navbar (padding + content height) */
+}
+
+/* Logo */
+#logo {
+  font-size: 35px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+#flow {
+  color: #e56717;
+}
+
+/* Navbar Right */
+#navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 0px;
+}
+
+#navbar-right a {
+  color: rgb(9, 9, 9);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: normal;
+  transition: color 0.3s ease;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+#navbar-right a.active {
+  position: relative;
+  color: #e56717;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+#navbar-right a.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff6b81, #ffcc70);
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+#navbar-right a.active:hover::after {
+  width: 100%;
+}
+
+/* Button - Donate */
+@keyframes shimmer {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.donatebtn {
+  display: inline-flex;
+  height: 42px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  font-weight: 600;
+  color: #ffffff;
+  border: 1px solid #8b4b22;
+  border-radius: 8px;
+  background: linear-gradient(110deg, #ff7f24 45%, #d2691e 55%, #ff7f24);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.donatebtn:hover {
+  background: linear-gradient(110deg, #ff8c42 45%, #a0522d 55%, #ff8c42);
+}
+
+.donatebtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #ff8c42, 0 0 0 4px #fff5eb;
+}
+
+.trackbtn {
+  display: inline-flex;
+  height: 42px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  font-weight: 600;
+  color: #ffffff;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  background: linear-gradient(110deg, #000103 45%, #1e2631 55%, #000103);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.trackbtn:hover {
+  background: linear-gradient(110deg, #000103 45%, #000103 55%, #000103);
+}
+
+.trackbtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #94a3b8, 0 0 0 4px #f8fafc;
+}
+
+/* Toggle Button */
+#toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  #navbar {
+    padding: 10px 15px;
+    width: 100%; /* Ensure full-width on mobile */
+    position: fixed; /* Keep it fixed on mobile */
+    top: 0;
+    left: 0;
+  }
+
+  #navbar-right {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Full width on mobile */
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  #navbar-right a {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #navbar-right.show {
+    display: flex;
+  }
+
+  #toggle {
+    display: block;
+  }
+}
+
+.plans {
+    padding: 50px 0;
+    text-align: center;
+    /* background-color: #fff; */
+}
+
+.plans h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.plan-card {
+    display: inline-block;
+    width: 10%;
+    margin: 0 10px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.plan-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.plan-card button {
+    padding: 10px 20px;
+    background-color: #2d3e50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
