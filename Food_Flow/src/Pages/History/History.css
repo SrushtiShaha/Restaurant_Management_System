@@ -1,0 +1,85 @@
+.donation-history {
+  min-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: auto; /* Enables scrolling */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+.donation-history::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari, and Edge */
+}
+
+  
+  h3 {
+    color: #000000;
+    margin-bottom: 15px;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-btn,
+  .sort-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9800;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .filter-btn.active {
+    background-color: #e68900;
+  }
+  
+  .filter-btn:hover,
+  .sort-btn:hover {
+    background-color: #e68900;
+  }
+  
+  .history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .history-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .history-item span {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .donation-type {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .veg {
+    color: green;
+  }
+  
+  .non-veg {
+    color: red;
+  }
+  

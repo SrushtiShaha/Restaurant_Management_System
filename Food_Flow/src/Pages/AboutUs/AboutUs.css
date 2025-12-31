@@ -1,0 +1,164 @@
+Light Color Theme :root {
+  --primary-color: #5c67f2; /* Soft Indigo */
+  --secondary-color: #ffb6b9; /* Light Pink */
+  --background-color: #fefefe; /* Almost White */
+  --text-color: #444; /* Dark Gray */
+  --heading-color: #3d348b; /* Deep Indigo */
+  --navbar-bg: #ffffff;
+  --footer-bg: #f8f9fa; /* Soft Gray */
+  --border-color: #e0e0e0;
+}
+
+/* General Styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#app .navbar {
+  border-radius: 0px !important;
+}
+
+.heading{
+  /* border: 5px solid black; */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+  font-size: 20px;
+  max-width: 90%;
+  position: relative;
+  left: 5%;
+  background-color: white;
+  color: black;
+  margin-top: 20px;
+}
+#heading1{
+  font-size: 2rem;
+}
+
+#app {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: #ffffff !important;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+#flowchart{
+  border-radius: 8px;
+  margin: 25px 0px;
+  width: 65%;
+  position: relative;
+  left: 17%;
+  /* box-shadow: ; */
+}
+/* Typography */
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--heading-color);
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+#waste{
+  border-radius: 8px;
+  margin: 25px 0px;
+  width: 65%;
+  position: relative;
+  left: 17%;
+}
+
+#first{
+  /* border: 5px solid black; */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+  font-size: 20px;
+  max-width: 90%;
+  position: relative;
+  left: 5%;
+  background-color: white;
+  color: black;
+}
+
+#below{
+  /* border: 5px solid black; */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+  font-size: 20px;
+  max-width: 90%;
+  position: relative;
+  left: 5%;
+  background-color: white;
+  color: black;
+}
+
+/* Lists */
+ol {
+  padding-left: 20px;
+  /* font-size: larger; */
+}
+
+li {
+  border-left: 5px solid orange;
+  line-height: 1.6;
+  padding: 10px;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--navbar-bg);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  #app {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

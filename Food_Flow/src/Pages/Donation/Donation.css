@@ -1,0 +1,67 @@
+/* Container */
+.donation-form-container {
+  max-width: 640px;
+  margin: 2.5rem auto;
+  padding: 1.5rem;
+  background-color: #121212; /* Deep black */
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px rgba(46, 204, 113, 0.4); /* Soft green glow */
+  color: white;
+}
+
+/* Title */
+.donation-form-container h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #2ecc71; /* Green */
+}
+
+/* Label */
+.donation-form label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #f0f0f0; /* Light white */
+}
+
+/* Input, Textarea, Select */
+.donation-form input,
+.donation-form textarea,
+.donation-form select {
+  margin-top: 0.25rem;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #1f1f1f;
+  border: 1px solid #2ecc71;
+  border-radius: 0.375rem;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.donation-form input:focus,
+.donation-form textarea:focus,
+.donation-form select:focus {
+  border-color: #27ae60;
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.4);
+}
+
+/* Button */
+.donation-form button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #2ecc71;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.donation-form button:hover {
+  background-color: #27ae60;
+}

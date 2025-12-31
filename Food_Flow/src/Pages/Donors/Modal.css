@@ -1,0 +1,225 @@
+/* Reset */
+* {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal Content */
+.modal-content {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 420px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+/* Slide Animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 12px;
+  font-weight: bold;
+}
+
+.modal-header h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Close Button (No Background) */
+.close-btn {
+  all: unset;  /* Removes all default button styles */
+  font-size: 24px;
+  cursor: pointer;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Form Layout */
+.modal-body {
+  margin-top: 15px;
+}
+
+.modal-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Labels */
+.modal-body label {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Input Fields */
+.modal-body input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-body input:focus {
+  border: 1px solid #1d4ed8;
+  outline: none;
+  box-shadow: 0 0 5px rgba(29, 78, 216, 0.5);
+}
+
+/* Food Type Buttons */
+.food-type {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.food-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 120px;
+  transition: all 0.3s ease-in-out;
+}
+
+.veg {
+  background: #16a34a;
+  color: white;
+}
+
+.non-veg {
+  background: #dc2626;
+  color: white;
+}
+
+.food-btn:hover {
+  filter: brightness(1.2);
+}
+
+/* Active State */
+.food-btn.active {
+  border: 2px solid black;
+}
+
+/* Food Category Buttons */
+.food-category {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.category-btn {
+  flex: 1;
+  padding: 12px;
+  background: #374151;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.category-btn:hover {
+  background: #1f2937;
+}
+
+/* Active State */
+.category-btn.active {
+  border: 2px solid white;
+  background: #1d4ed8;
+}
+
+/* Estimated Food Section */
+.food-estimation {
+  display: flex;
+  gap: 10px;
+}
+
+.food-estimation input {
+  flex: 1;
+  text-align: center;
+}
+
+/* Next Button */
+.next-btn {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.next-btn:hover {
+  background-color: #1e40af;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 90%;
+  }
+}
+

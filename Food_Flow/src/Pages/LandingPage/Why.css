@@ -1,0 +1,86 @@
+/* Global Styling */
+#Grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 50px;
+    color: #fffaf0; /* Soft Ivory */
+    font-family: "Poppins", sans-serif;
+    border-radius: 20px;
+}
+
+/* Left Side: Text */
+#Text {
+    flex: 1;
+    max-width: 500px;
+    margin-left: 75px;
+}
+
+#Text h1 {
+    font-size: 36px;
+    /* color: #ff9100;  */
+    /* text-shadow: 0px 0px 10px rgba(255, 145, 0, 0.6); */
+    margin-bottom: 15px;
+}
+
+#Text ul {
+    list-style: none;
+    padding: 0;
+}
+
+#Text li {
+    font-size: 16px;
+    line-height: 1.6;
+    background: rgba(255, 145, 0, 0.7); 
+    padding: 12px;
+    border-left: 5px solid #ff9100; /* Orange Accent Line */
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+#Text li:hover {
+    background: rgba(255, 145, 0, 0.6);
+    transform: translateX(8px);
+}
+
+/* Right Side: Image */
+#Image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0px 8px 20px rgba(255, 94, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#Image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(255, 94, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #Grid {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    #Text {
+        max-width: 90%;
+        margin-left: 0px;
+    }
+
+    #Image img {
+        max-width: 80%;
+    }
+}
