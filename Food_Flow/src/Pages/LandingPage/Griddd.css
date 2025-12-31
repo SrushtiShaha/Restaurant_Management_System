@@ -1,0 +1,8 @@
+.HotelGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, auto);  
+    gap: 10px; 
+    width: fit-content; 
+    margin: auto; 
+}

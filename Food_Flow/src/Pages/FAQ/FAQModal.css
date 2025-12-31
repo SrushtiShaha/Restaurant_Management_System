@@ -1,0 +1,161 @@
+/* 🔥 FAQ Modal - Dark Orange Theme */
+.faq-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.faq-modal {
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    color: #ffb347;
+    width: 55%;
+    max-width: 650px;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 15px rgba(255, 153, 51, 0.4);
+    animation: fadeIn 0.3s ease-in-out;
+    border: 2px solid #ff7b00;
+}
+
+/* Header Section */
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ff7b00;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.faq-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffb347;
+    text-transform: uppercase;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #ff5733;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #ff9f43;
+    transform: scale(1.1);
+}
+
+/* Search Bar */
+.faq-search {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid #ff7b00;
+    background: #222;
+    color: #ffb347;
+    margin-bottom: 18px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.faq-search:focus {
+    outline: none;
+    border-color: #ffb347;
+    box-shadow: 0 0 8px rgba(255, 153, 51, 0.5);
+}
+
+/* FAQ List */
+.faq-list {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 12px;
+    color: white;
+}
+
+/* Individual FAQ Item */
+.faq-item {
+    background: #161616;
+    padding: 14px 18px;
+    margin: 8px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    position: relative;
+    color: white;
+}
+
+.faq-item:hover {
+    background: #222;
+    border-left: 4px solid #ff7b00;
+    transform: scale(1.02);
+}
+
+/* FAQ Answer (Hidden by Default) */
+.faq-answer {
+    margin-top: 8px;
+    padding: 10px;
+    border-left: 4px solid #ff9f43;
+    background: #292929;
+    color: #ddd;
+    font-size: 15px;
+    border-radius: 6px;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* When Active, Show Answer */
+.faq-item.active .faq-answer {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Make FAQ Questions White */
+.faq-item summary {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Optional: Change Color on Hover */
+.faq-item:hover summary {
+    color: #ffb347;
+}
+
+/* Scrollbar Styling */
+.faq-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.faq-list::-webkit-scrollbar-thumb {
+    background: #ff7b00;
+    border-radius: 4px;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

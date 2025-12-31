@@ -1,0 +1,203 @@
+#NGO-section {
+    background-image: url('../../assets/NGO.webp'); /* Ensure correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: white; 
+    margin-top: -35px;
+    min-height: 570px; 
+}
+
+/* Make heading pop */
+#NGO-section h1 {
+    font-size: 4rem; /* Big text */
+    font-weight: 800; /* Extra bold */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/* Style the paragraph */
+#NGO-section p {
+    font-size: 1rem; /* Large and readable */
+    font-weight: 600;
+    max-width: 70%;
+    line-height: 1.5;
+}
+
+#register-food,#Schedule-Pickup,#Donation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
+    background-color: #fff; /* White background */
+    color: black;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 100% !important;
+    height: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left section */
+#left,#Schedule-right,#Donation-left {
+    width: 50%;
+    text-align: left;
+}
+
+#left h1,#Schedule-right h1,#Donation-left h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#left p,#Schedule-right p,#Donation-left p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #666; /* Soft gray text */
+}
+
+#buttons button {
+    height: 50px;
+    width: 150px;
+    padding: 10px 15px !important;
+    font-size: 1rem !important;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: black !important; 
+    color: white !important; /* White text for contrast */
+}
+
+#buttons button:hover {
+    background-color: #333 !important; /* Slightly lighter black on hover */
+}
+
+/* Right section */
+#right,#Donation-right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#Schedule-left {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#right img,#Schedule-left img,#Donation-right img {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* VEG = Green, NON-VEG = Red
+.food-btn.veg {
+    background-color: green;
+    color: white;
+  }
+  
+  .food-btn.non-veg {
+    background-color: red;
+    color: white;
+  }
+   */
+/* VEG & NON-VEG Button Styling */
+.food-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* VEG Button - Green */
+  .food-btn:nth-child(1) {
+    background-color: #28a745; /* Green */
+    color: white;
+  }
+  
+  .food-btn:nth-child(1):hover {
+    background-color: #218838;
+    box-shadow: 0px 0px 10px rgba(40, 167, 69, 0.8);
+  }
+  
+  /* NON-VEG Button - Red */
+  .food-btn:nth-child(2) {
+    background-color: #dc3545; /* Red */
+    color: white;
+  }
+  
+  .food-btn:nth-child(2):hover {
+    background-color: #c82333;
+    box-shadow: 0px 0px 10px rgba(220, 53, 69, 0.8);
+  }
+  
+  /* Active State */
+  .food-btn.active {
+    outline: 3px solid rgba(0, 0, 0, 0.2);
+  }
+  
+
+  /* Category Buttons Black */
+  .category-btn {
+    background: black;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .category-btn:hover {
+    background: grey;
+  }
+  
+  /* Confirm Button */
+  .confirm-btn {
+    background: #16a34a;
+    color: black;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .confirm-btn:hover {
+    background: #0f8a3c;
+  }
+
+  /* Increase vertical spacing between Donor & Volunteer fields */
+.input-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; /* Increased space */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
